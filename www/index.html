@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        
+        <!-- DO NOT MOVE THE SCRIPT'S POSITION!! -->
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        
+          <!--Import jQuery before materialize.js-->
+          <script src="https://code.jquery.com/jquery-2.1.1.min.js" integrity="sha256-h0cGsrExGgcZtSZ/fRz4AwV+Nn6Urh/3v3jFRQ0w9dQ=" crossorigin="anonymous"></script>
+          <script type="text/javascript" src="js/materialize.min.js"></script>
+        
+          <!--Import Google Icon Font-->
+          <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+          <!--Import materialize.css-->
+          <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <!-- DO NOT MOVE THE SCRIPT'S POSITION!! -->
+        
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div class="row">
+            <form class="col s12 m6">
+                <div class="input-field col s12">
+                  <input placeholder="Contoh: Kristanto Wicaksono" id="nama_lengkap" type="text" class="validate">
+                  <label for="nama_lengkap">Nama Lengkap : *</label>
+                </div>
+                <div class="input-field col s12">
+                  <input placeholder="Contoh: Kristanto" id="nama_panggilan" type="text" class="validate">
+                  <label for="nama_panggilan">Nama Panggilan : </label>
+                </div>
+                <div class="input-field col s12">
+                    <select id="gender-select">
+                        <option value="" disabled selected>Pilih Jenis Kelamin Anda</option>
+                        <option value="male">Pria</option>
+                        <option value="female">Wanita</option>
+                    </select>
+                    <label>Gender : *</label>
+                </div>
+                  <div class="input-field col s12">
+                    <select id="agama-select">
+                      <option value="" disabled selected>Pilih Agama Anda</option>
+                      <option value="Islam">Islam</option>
+                      <option value="Katolik">Katolik</option>
+                      <option value="Kristen">Kristen</option>
+                      <option value="Buddha">Buddha</option>
+                      <option value="Hindu">Hindu</option>
+                      <option value="Konghucu">Konghucu</option>
+                    </select>
+                    <label>Agama : *</label>
+                  </div>
+                <div class="input-field col s12">
+                  <input placeholder="Contoh: Surabaya" id="tempat_lahir" type="text" class="validate">
+                  <label for="tempat_lahir">Tempat Lahir : *</label>
+                </div>
+                <div class="input-field col s12">
+                  <input placeholder="Tanggal Lahir" id="tanggal_lahir" type="date" class="datepicker">
+                  <label for="tempat_lahir">Tanggal Lahir : *</label>
+                </div>
+                  <div class="input-field col s12">
+                    <select id="golongan-darah-select">
+                      <option value="" disabled selected>Pilih Golongan Darah Anda</option>
+                      <option value="O">O</option>
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                      <option value="AB">AB</option>
+                    </select>
+                    <label>Golongan Darah : *</label>
+                  </div>
+                <div class="input-field col s12">
+                    <select id="kewarganegaraan-select">
+                        <option value="" disabled selected>Pilih Kewarganegaraan Anda</option>
+                    </select>
+                    <label>Kewarganegaraan : *</label>
+                </div>
+                <div class="input-field col s12">
+                    <select id="provinsi-select">
+                      <option value="" disabled selected>Pilih Propinsi</option>
+                      <option value="Prop1">Prop1</option>
+                    </select>
+                    <label>Provinsi : *</label>
+                </div>
+            </form>
+            <form class="col s12 m6">
+                <div class="input-field col s12">
+                    <select id="kabupaten-select">
+                      <option value="" disabled selected>Pilih Kabupaten</option>
+                      <option value="Kab1">Kab1</option>
+                    </select>
+                    <label>Kabupaten : *</label>
+                </div>
+                <div class="input-field col s12">
+                    <select id="kecamatan-select">
+                      <option value="" disabled selected>Kecamatan Tempat Tinggal</option>
+                      <option value="Kec1">Kec1</option>
+                    </select>
+                    <label>Kecamatan : *</label>
+                </div>
+                <div class="input-field col s12">
+                    <select id="desa-select">
+                      <option value="" disabled selected>Desa Tempat Tinggal</option>
+                      <option value="Des1">Des1</option>
+                    </select>
+                    <label>Desa : *</label>
+                </div>
+                <div class="input-field col s12">
+                  <input placeholder="Contoh: Jl. Andhika No.959" id="alamat_tinggal" type="text">
+                  <label for="alamat_tinggal">Alamat Tinggal : *</label>
+                </div>
+                <div class="input-field col s12">
+                  <input placeholder="Contoh: 60167" id="kode_pos" type="text">
+                  <label for="kode_pos">Kode Pos : *</label>
+                </div>
+                <div class="input-field col s12">
+                    <select id="status-pernikahan-select">
+                      <option value="" disabled selected>Status Pernikahan</option>
+                      <option value="menikah">Menikah</option>
+                      <option value="duda">Duda</option>
+                      <option value="janda">Janda</option>
+                      <option value="belum_menikah">Belum Menikah</option>
+                    </select>
+                    <label>Status Pernikahan : *</label>
+                </div>
+                <div class="input-field col s12">
+                  <input disabled placeholder="Tanggal Pernikahan" id="tanggal_pernikahan" type="date" class="datepicker">
+                  <label for="tanggal_pernikahan">Tanggal Pernikahan : </label>
+                </div>
+                <div class="input-field col s12">
+                  <input disabled="false" placeholder="Nomor KTP / Passport" id="nomor_ktp_//_passport" type="text">
+                  <label for="nomor_ktp_//_passport">Nomor KTP / Passport (Umur > 16) : </label>
+                </div>
+                <div class="input-field col s12">
+                  <input placeholder="Alamat KTP / Passport" id="alamat_ktp_//_passport" type="text">
+                  <label for="alamat_ktp_//_passport">Alamat KTP / Passport (Umur > 16) : </label>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
